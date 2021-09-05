@@ -1,7 +1,7 @@
 Attribute,Attribute Description
 id,Uniques identity number to identify each unique review given by the user to a particular product in the dataset
 brand,Name of the brand of the product to which user has given review and rating
-categories,"Category of the product like household essentials, books, personal care products, medicines, cosmetic items, beauty products, electrical appliances, kitchen and dining products, health care products and many more."
+categories,"Category of the product like household essentials, books, personal care products, medicines, cosmeticï¿½items, beauty products, electrical appliances, kitchen and dining products, health care products and many more."
 manufacturer,Name of the manufacturer of the product
 name,Name of the product to which user has added review or rating
 reviews_date,Date on which the review has been added by the user
