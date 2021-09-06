@@ -22,8 +22,6 @@ fastcache==1.1.0
 flatbuffers==1.12
 future==0.18.2
 gast==0.4.0
-google-auth==1.32.1
-google-auth-oauthlib==0.4.4
 google-pasta==0.2.0
 grpcio==1.34.1
 gym==0.7.4
@@ -35,7 +33,6 @@ json5==0.9.5
 jupyter==1.0.0
 keras-nightly==2.5.0.dev2021032900
 Keras-Preprocessing==1.1.2
-llvmlite==0.36.0
 locket==0.2.1
 Markdown==3.3.4
 MarkupSafe==1.1.1
@@ -54,7 +51,6 @@ pathspec==0.7.0
 patsy==0.5.1
 pep8==1.7.1
 pkginfo==1.7.0
-plotly==4.14.3
 ply==3.11
 protobuf==3.17.3
 pyasn1==0.4.8
@@ -65,15 +61,12 @@ pyglet==1.5.17
 PyJWT==2.1.0
 pyreadline==2.1
 pytest==6.2.3
-PyYAML==5.4.1
 pyzmq==20.0.0
 QDarkStyle==2.8.1
 QtPy==1.9.0
 requests-oauthlib==1.3.0
 retrying==1.3.3
-scikit-image==0.18.1
 simplegeneric==0.8.1
-statsmodels==0.12.2
 tables==3.6.1
 tensorboard==2.5.0
 tensorboard-data-server==0.6.1
@@ -84,7 +77,6 @@ termcolor==1.1.0
 terminado==0.9.4
 unicodecsv==0.14.1
 webencodings==0.5.1
-widgetsnbextension==3.5.1
 win-unicode-console==0.5
 wincertstore==0.2
 wrapt==1.12.1
