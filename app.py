@@ -47,18 +47,18 @@ def predict():
         #pro_df = pro_df.reset_index(drop = True)
         #print(pro_df['index'].head())
         for pro_name in pro_df['index']:
-            print('pro_name', pro_name)
+            #print('pro_name', pro_name)
             review_test = products_details[products_details['name']==pro_name].reviews_text
             tfidf_vector.fit(review_test.values.tolist())
 
             x_test_new = tfidf_vector.transform(review_test.values.tolist())
-            print(type(x_test_new))
+            #print(type(x_test_new))
             x_test_new=xgb.DMatrix(x_test_new)
             pro_reviews[pro_name] = model_load.predict(x_test_new)
             (unique, counts) = np.unique(pro_reviews[pro_name], return_counts=True)
-            print((unique, counts))
+            #print((unique, counts))
             frequencies = np.asarray((unique, counts)).T
-            print(frequencies)
+            #print(frequencies)
             if len(frequencies)==2:
                 pos_rev=frequencies[1][1]
                 neg_rev=frequencies[0][1]
@@ -71,7 +71,7 @@ def predict():
                     neg_rev=frequencies[0][1]
             
             
-            print(pos_rev, neg_rev)
+            #print(pos_rev, neg_rev)
             total= pos_rev+neg_rev
             pro_review_per[pro_name] = pos_rev/total  
         pro_review_per_sorted=sorted(pro_review_per.items(), key=lambda x: x[1], reverse=True)
