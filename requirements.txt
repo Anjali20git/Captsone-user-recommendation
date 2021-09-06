@@ -25,11 +25,9 @@ google-pasta==0.2.0
 grpcio==1.34.1
 gym==0.7.4
 gunicorn==20.1.0
-h5py==3.1.0
 HeapDict==1.0.1
 isodate==0.6.0
 jdcal==1.4.1
-json5==0.9.5
 locket==0.2.1
 Markdown==3.3.4
 MarkupSafe==1.1.1
@@ -40,7 +38,6 @@ msrest==0.6.21
 msrestazure==0.6.4
 multipledispatch==0.6.0
 numpy==1.19.5
-oauthlib==3.1.1
 olefile==0.46
 opt-einsum==3.3.0
 parso==0.7.0
