@@ -63,7 +63,6 @@ pycosat==0.6.3
 pycurl==7.43.0.6
 pyglet==1.5.17
 PyJWT==2.1.0
-pyodbc===4.0.0-unsupported
 pyreadline==2.1
 pytest==6.2.3
 pywin32==227
