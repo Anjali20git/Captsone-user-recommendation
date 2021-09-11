@@ -47,6 +47,7 @@ def RecommendProducts(user_input):
     pro_review_per_sorted=sorted(pro_review_per.items(), key=lambda x: x[1], reverse=True)
     pro_review_per_sorted=list(zip(*pro_review_per_sorted))
     output=pd.DataFrame(list(pro_review_per_sorted[0])[:5]) #sort and get the 5 products
+    
     return output
 
 
