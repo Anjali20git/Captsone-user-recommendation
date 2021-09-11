@@ -9,7 +9,8 @@ from imblearn.over_sampling import SMOTE
 
 lr_pickle_model = joblib.load('./models/lr_model.pkl') 
 user_final_rating = pd.read_pickle('./models/final_user_rating.pkl')
-products_details = pd.read_csv('sample30.csv')
+products_details = pd.read_pickle('./models/final_data_df.pkl')
+#products_details = pd.read_csv('sample30.csv')
 tfidf_vector = TfidfVectorizer(stop_words="english")
 
 def RecommendProducts(user_input):
@@ -24,7 +25,7 @@ def RecommendProducts(user_input):
     pro_df = pro_df.reset_index(drop = True)
     
     for pro_name in pro_df['index']:
-        print('pro_name', pro_name)
+        
         review_test = products_details[products_details['name']==pro_name].reviews_text
         pro_reviews[pro_name] = lr_pickle_model.predict(review_test)
         (unique, counts) = np.unique(pro_reviews[pro_name], return_counts=True)
@@ -42,12 +43,14 @@ def RecommendProducts(user_input):
                 pos_rev=0
                 neg_rev=frequencies[0][1]
         total= pos_rev+neg_rev
-        pro_review_per[pro_name] = pos_rev/total  
+      
+        pro_review_per[pro_name] = pos_rev/total 
+        
 
     pro_review_per_sorted=sorted(pro_review_per.items(), key=lambda x: x[1], reverse=True)
-    pro_review_per_sorted=list(zip(*pro_review_per_sorted))
-    output=pd.DataFrame(list(pro_review_per_sorted[0])[:5]) #sort and get the 5 products
+    #pro_review_per_sorted=list(zip(*pro_review_per_sorted))
+   
+    output=[t[0] for t in pro_review_per_sorted][:5]
+    output=pd.DataFrame(output) #sort and get the 5 products
     
     return output
-
-
