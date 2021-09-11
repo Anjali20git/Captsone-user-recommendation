@@ -27,7 +27,14 @@
 
    <br>
    <br>
-     {{ Recommended_Products }}
+     
+  
+    
+    {% for table in Recommended_Products %}
+      {{ table|safe }}
+    {% endfor %}
+   
+
 
  </div>
 
